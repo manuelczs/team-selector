@@ -7,9 +7,9 @@ const Suplentes = ({suplentes, quitarSuplente}) => (
     <div className="container">
       {
         suplentes.map(j => (
-          <article className="" key={j.id}>
+          <article className="box jugador" key={j.id}>
             <div>
-              <img src={j.foto} alt={j.nombre}/>
+              <img className="img-jugador" src={j.foto} alt={j.nombre}/>
               <button onClick={() => quitarSuplente(j)}>X</button>
             </div>
             <p>{j.nombre}</p>

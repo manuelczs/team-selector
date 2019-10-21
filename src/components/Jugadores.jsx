@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 const Jugadores = ({jugadores, agregarTitular, agregarSuplente}) => (
-  <section className="box">
+  <section className="box box-jugadores">
     <h2 className="title">Jugadores</h2>
     <div className="">
       {
         jugadores.map(j => (
-          <article className="box" key={j.id}>
-            <img src={j.foto} alt={j.nombre}/>
+          <article className="box jugador" key={j.id}>
+            <img className="img-jugador" src={j.foto} alt={j.nombre}/>
             <h3>{j.nombre}</h3>
             <div>
               <button className="button is-success" onClick={() => agregarTitular(j)}>Titular</button>

@@ -1,0 +1,18 @@
+.box-jugadores {
+  width: 100%;
+  height: auto;
+}
+
+.jugador {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 3px;
+  text-align: center;
+}
+
+.img-jugador {
+  border-radius: 50%;
+  height: 10rem;
+  width: auto;
+}
