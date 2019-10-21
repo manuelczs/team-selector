@@ -6,8 +6,8 @@ import EquipoSeleccionado from './components/EquipoSeleccionado';
 
 const App = () => (
   <Provider store={store}>
-    <main>
-      <h1>EDmanager</h1>
+    <main className="container">
+      <h1 className="title box">Team Selector</h1>
       <Jugadores />
       <EquipoSeleccionado />
     </main>

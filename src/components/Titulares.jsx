@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Titulares = ({titulares, quitarTitular}) => (
-  <section>
-    <h2>Titulares</h2>
-    <div className="cancha">
+  <section className="box">
+    <h2 className="title">Titulares</h2>
+    <div>
       {
         titulares.map(j => (
-          <article className="titular" key={j.id}>
+          <article className="" key={j.id}>
             <div>
               <img src={j.foto} alt={j.nombre}/>
               <button onClick={() => quitarTitular(j)}>X</button>

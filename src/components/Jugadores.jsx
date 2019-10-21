@@ -2,17 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Jugadores = ({jugadores, agregarTitular, agregarSuplente}) => (
-  <section>
-    <h2>Jugadores</h2>
-    <div className="contenedor-jugadores">
+  <section className="box">
+    <h2 className="title">Jugadores</h2>
+    <div className="">
       {
         jugadores.map(j => (
-          <article className="jugador" key={j.id}>
+          <article className="box" key={j.id}>
             <img src={j.foto} alt={j.nombre}/>
             <h3>{j.nombre}</h3>
             <div>
-              <button onClick={() => agregarTitular(j)}>Titular</button>
-              <button onClick={() => agregarSuplente(j)}>Suplente</button>
+              <button className="button is-success" onClick={() => agregarTitular(j)}>Titular</button>
+              <button className="button is-info" onClick={() => agregarSuplente(j)}>Suplente</button>
             </div>
           </article>
         ))
