@@ -7,7 +7,7 @@ const Titulares = ({titulares}) => (
     <div className="cancha">
       {
         titulares.map(j => (
-          <article className="titular">
+          <article className="titular" key={j.id}>
             <div>
               <img src={j.foto} alt={j.nombre}/>
               <button>X</button>

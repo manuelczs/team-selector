@@ -7,7 +7,7 @@ const Suplentes = ({suplentes}) => (
     <div className="cancha">
       {
         suplentes.map(j => (
-          <article className="suplente">
+          <article className="suplente" key={j.id}>
             <div>
               <img src={j.foto} alt={j.nombre}/>
               <button>X</button>

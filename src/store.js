@@ -21,7 +21,14 @@ const initialState = {
 
 // reducer function
 const reducerEntrenador = (state=initialState, action) => {
-  return state;
+  if(action.type === 'AGREGAR_TITULAR') {
+    return {
+      ...state,
+      titulares: state.titulares.concat(action.jugador),
+      jugadores: state.jugadores.filter(j => j.id !== action.jugador.id)
+    }
+  }
+  return state
 } 
 
 export default createStore(reducerEntrenador);
